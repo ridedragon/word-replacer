@@ -24,7 +24,9 @@
 <script setup lang="ts">
 import { use_settings_store } from './settings';
 
-const settings = use_settings_store().settings;
+import { storeToRefs } from 'pinia';
+
+const { settings } = storeToRefs(use_settings_store());
 
 const handle_button_click = () => {
   toastr.success('你好呀!');

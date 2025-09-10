@@ -2,7 +2,7 @@ import { saveSettingsDebounced } from '@sillytavern/script';
 import { extension_settings } from '@sillytavern/scripts/extensions';
 
 import { defineStore } from 'pinia';
-import { reactive, watch } from 'vue';
+import { ref, watch } from 'vue';
 import * as z from 'zod';
 
 type Settings = z.infer<typeof Settings>;
@@ -11,13 +11,12 @@ const Settings = z.object({
 });
 
 export const use_settings_store = defineStore('settings', () => {
-  // @ts-ignore
-  const settings = reactive(Settings.parse(_.get(extension_settings, 'tavern_extension_template', {})));
+  const settings = ref(Settings.parse(_.get(extension_settings, 'tavern_extension_template', {})));
 
   watch(
     settings,
     new_settings => {
-      _.set(extension_settings, 'tavern_extension_template', new_settings);
+      _.set(extension_settings, 'tavern_extension_template', _.cloneDeep(new_settings)); // 用 structuredClone 去除 proxy 层
       saveSettingsDebounced();
     },
     { immediate: true, deep: true },
