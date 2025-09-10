@@ -1,0 +1,11 @@
+{
+  "display_name": "<插件名称>",
+  "loading_order": 100,
+  "requires": [],
+  "optional": [],
+  "js": "dist/index.js",
+  "author": "<作者名称>",
+  "version": "1.0.0",
+  "homePage": "<仓库URL>",
+  "auto_update": true
+}
