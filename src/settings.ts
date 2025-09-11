@@ -13,14 +13,10 @@ const Settings = z.object({
 export const use_settings_store = defineStore('settings', () => {
   const settings = ref(Settings.parse(_.get(extension_settings, 'tavern_extension_template', {})));
 
-  watch(
-    settings,
-    new_settings => {
-      _.set(extension_settings, 'tavern_extension_template', _.cloneDeep(new_settings)); // 用 structuredClone 去除 proxy 层
-      saveSettingsDebounced();
-    },
-    { immediate: true, deep: true },
-  );
+  watchEffect(() => {
+    _.set(extension_settings, 'tavern_extension_template', _.cloneDeep(settings.value)); // 用 structuredClone 去除 proxy 层
+    saveSettingsDebounced();
+  });
   return {
     settings,
   };
