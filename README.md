@@ -15,7 +15,7 @@ SillyTavern 插件模板, 但我更建议你编写[酒馆助手脚本](http://gi
 
 在创建仓库后, 将本仓库克隆到本地 `SillyTavern/public/scripts/extensions/third-party` 中, 这样你的酒馆就安装好了这个插件, 并且你能在仓库里开始编写代码.
 
-然后, 你需要更改 `manifest.json` 和 `package.json` 中的 `<占位符>` 为你想要的名字. 需要注意的是, 如果要使用断点调试, 则 `package.json` 中的 `name` 必须与仓库名称一致.
+然后, 你需要更改 `manifest.json` 和 `package.json` 中的 `<占位符>` 为你想要的名字.
 
 ### 软件要求
 
@@ -39,6 +39,8 @@ pnpm install
 import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/public/scripts/utils.js` 中的 uuidv4 函数
 ```
 
+### 访问酒馆助手接口
+
 此外你可以通过 `TavernHelper` 访问酒馆助手的所有接口. 请参考[酒馆助手文档](https://n0vi028.github.io/JS-Slash-Runner-Doc/guide/基本用法/开发其他插件时使用.html)进行配置.
 
 ### i18n
@@ -47,9 +49,9 @@ import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/pub
 
 ### 第三方库
 
-#### vue、pinia 等
+#### vue、pinia、zod 等
 
-模板默认提供的是使用 vue、pinia 的示例.
+模板默认提供的是使用 vue、pinia、zod 的示例. 尤其是 `store/settings.ts` 中对 pinia 的使用大幅简化了插件配置的存取: **其他地方代码只需要任意使用 `useSettingsStore` 返回的设置, 而设置将及时保存到酒馆存档内**.
 
 #### tailwindcss
 
