@@ -64,7 +64,7 @@ jobs:
       - if: ${{ github.ref_type == 'tag' || steps.autotag_check.outputs.should_tag == 'true' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          include: 'public/scripts/extensions/third-party/extension/manifest.json'
+          include: manifest.json
           find: \d+\.\d+\.\d+
           replace: ${{ github.ref_type == 'tag' && steps.manual_tag.outputs.result || steps.autotag.outputs.new-tag }}
           regex: true
@@ -75,7 +75,7 @@ jobs:
       - if: ${{ github.ref_type == 'tag' || steps.autotag_check.outputs.should_tag == 'true' }}
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          include: 'public/scripts/extensions/third-party/extension/package.json'
+          include: package.json
           find: '"version": "\d+\.\d+\.\d+"'
           replace: ${{ steps.package_version.outputs.result }}
           regex: true
