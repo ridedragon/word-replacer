@@ -90,6 +90,15 @@ import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/pub
 git config --global merge.ours.driver true
 ```
 
+### 断点调试
+
+目前, windows 上不能在 VSCode 内 vue 文件中成功设置断点, 但其他平台能成功设置.
+
+这疑似是 windows `\` 或卷名造成的, 我还没找到解决方法, 你可以:
+
+- 在代码中用 `debugger` 触发断点.
+- 在浏览器中 f12 手动设置断点.
+
 ## 许可证
 
 - [Aladdin](LICENSE)
