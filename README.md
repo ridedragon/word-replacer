@@ -46,7 +46,9 @@ import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/pub
 
 ### i18n
 
-要让插件支持其他语言, 你应该在界面上用 `` t`要显示的文本` `` 来显示文本, 然后在修改 `i18n/en.json` 等.
+要让插件支持英语, 你应该在界面上用 `` t`要显示的文本` `` 来显示文本, 然后在 `i18n/en.json` 中添加对应的映射.
+
+如果要支持更多语言, 则你需要在 `manifest.json` 中添加对应的语言文件映射. 具体请参考[酒馆官方文档](https://docs.sillytavern.app/for-contributors/writing-extensions/#internationalization).
 
 ### 第三方库
 
