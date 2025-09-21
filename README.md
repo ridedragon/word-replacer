@@ -41,9 +41,21 @@ import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/pub
 
 此外你可以通过 `TavernHelper` 访问酒馆助手的所有接口. 请参考[酒馆助手文档](https://n0vi028.github.io/JS-Slash-Runner-Doc/guide/功能详情/接口访问.html)了解更多细节.
 
+### i18n
+
+要让插件支持其他语言, 你应该在界面上用 `` t`要显示的文本` `` 来显示文本, 然后在修改 `i18n/en.json` 等.
+
 ### 第三方库
 
-模板默认提供了一个使用 vue、pinia 的示例.
+#### vue、pinia 等
+
+模板默认提供的是使用 vue、pinia 的示例.
+
+#### tailwindcss
+
+本项目虽然支持了 tailwindcss, 但模板中并没有使用. 因为它的一些样式会导致酒馆网页的样式错乱. 如果你需要使用 tailwindcss, 请自行在 `src/global.css` 中添加 `@import 'tailwindcss';` 并修正其导致的样式错误.
+
+此外, 你可以调整 `eslint.config.mjs` 中对 tailwindcss 的配置.
 
 ### 打包
 

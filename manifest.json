@@ -4,8 +4,12 @@
   "requires": [],
   "optional": [],
   "js": "dist/index.js",
+  "css": "dist/index.css",
   "author": "<作者名称>",
   "version": "1.0.0",
   "homePage": "<仓库URL>",
-  "auto_update": true
+  "auto_update": true,
+  "i18n": {
+    "en": "i18n/en.json"
+  }
 }

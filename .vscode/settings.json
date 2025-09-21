@@ -1,10 +1,11 @@
 {
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.addMissingImports.ts": "explicit",
     "source.convertImportFormat": "explicit",
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
-    "source.sortImports": "explicit",
+    "source.sortImports": "explicit"
   },
   "prettier.arrowParens": "avoid",
   "prettier.bracketSameLine": false,
@@ -25,6 +26,9 @@
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -38,7 +42,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
