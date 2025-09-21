@@ -4,3 +4,5 @@ export const Settings = z
     button_selected: z.boolean().default(false),
   })
   .prefault({});
+
+export const setting_field = 'tavern_extension_example';
