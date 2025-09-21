@@ -1,3 +1,4 @@
-ignoredBuiltDependencies:
-  - unrs-resolver
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
   - esbuild
+  - unrs-resolver
