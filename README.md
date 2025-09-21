@@ -19,7 +19,7 @@ SillyTavern 插件模板, 但我更建议你编写[酒馆助手脚本](http://gi
 
 ### 软件要求
 
-你需要先安装有 node 22+ 和 pnpm, 可以参考 [实时编写前端界面或脚本的 Cursor 环境配置](https://stagedog.github.io/青空莉/工具经验/实时编写前端界面或脚本/环境准备/) . 如果已经安装有 node 22+, 则 pnpm 可以按以下步骤安装:
+你需要先安装有 node 22+ 和 pnpm, 可以参考[实时编写前端界面或脚本的 Cursor 环境配置](https://stagedog.github.io/青空莉/工具经验/实时编写前端界面或脚本/环境准备/). 如果已经安装有 node 22+, 则 pnpm 可以按以下步骤安装:
 
 ```bash
 npm install -g pnpm
