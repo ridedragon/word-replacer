@@ -14,15 +14,10 @@ jobs:
       # checkout
       - uses: actions/checkout@v4
         with:
-          repository: SillyTavern/SillyTavern
-          ref: staging
-      - uses: actions/checkout@v4
-        with:
-          path: public/scripts/extensions/third-party/extension
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: JesseTG/rm@v1.0.3
         with:
-          path: public/scripts/extensions/third-party/exntension/dist
+          path: dist
 
       # build
       - uses: actions/setup-node@v4
@@ -32,15 +27,11 @@ jobs:
         with:
           version: 10
       - run: pnpm i
-        working-directory: public/scripts/extensions/third-party/extension
       - run: pnpm format
-        working-directory: public/scripts/extensions/third-party/extension
       - run: pnpm build
-        working-directory: public/scripts/extensions/third-party/extension
       # tag if [release...] is in the commit message subject
       - id: autotag_check
         shell: bash
-        working-directory: public/scripts/extensions/third-party/extension
         run: |-
           message=$(git log -n 1 --pretty=format:"%s")
           if [[ $message == *"[release]"* || $message == *"[release patch]"* ]]; then
@@ -94,16 +85,13 @@ jobs:
         with:
           default_author: github_actions
           message: '[bot] Bundle'
-          cwd: public/scripts/extensions/third-party/extension
       - if: ${{ github.ref_type == 'tag' }}
         shell: bash
-        working-directory: public/scripts/extensions/third-party/extension
         run: |-
           git tag -d ${{ steps.manual_tag.outputs.result }}
           git push --delete origin ${{ steps.manual_tag.outputs.result }}
       - if: ${{ github.ref_type == 'tag' || steps.autotag_check.outputs.should_tag == 'true' }}
         shell: bash
-        working-directory: public/scripts/extensions/third-party/extension
         run: |-
           git tag ${{ github.ref_type == 'tag' && steps.manual_tag.outputs.result || steps.autotag.outputs.new-tag }}
           git push --tags
