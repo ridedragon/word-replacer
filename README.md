@@ -55,7 +55,7 @@ import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/pub
 
 本项目虽然支持了 tailwindcss, 但模板中并没有使用. 因为它的一些样式会导致酒馆网页的样式错乱. 如果你需要使用 tailwindcss, 请自行在 `src/global.css` 中添加 `@import 'tailwindcss';` 并修正其导致的样式错误.
 
-此外, 你可以调整 `eslint.config.mjs` 中对 tailwindcss 的配置.
+此外, 你可以调整 `eslint.config.mjs` 中对 tailwindcss 的配置; 尤其是 eslint-plugin-better-tailwindcss 与 prettier 之间的[冲突问题](https://stagedog.github.io/青空莉/工具经验/实时编写前端界面或脚本/进阶技巧/).
 
 ### 打包
 
