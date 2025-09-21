@@ -39,6 +39,9 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "auto-imports.d.ts",
+    "auto-imports.zod.d.ts",
+    "components.d.ts",
     "src/**/*.ts",
     "../../../../**/*.js" // for intelligence
   ],
