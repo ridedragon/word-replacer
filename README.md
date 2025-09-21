@@ -39,7 +39,7 @@ pnpm install
 import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/public/scripts/utils.js` 中的 uuidv4 函数
 ```
 
-此外你可以通过 `TavernHelper` 访问酒馆助手的所有接口. 请参考[酒馆助手文档](https://n0vi028.github.io/JS-Slash-Runner-Doc/guide/功能详情/接口访问.html)了解更多细节.
+此外你可以通过 `TavernHelper` 访问酒馆助手的所有接口. 请参考[酒馆助手文档](https://n0vi028.github.io/JS-Slash-Runner-Doc/guide/基本用法/开发其他插件时使用.html)进行配置.
 
 ### i18n
 
