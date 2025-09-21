@@ -10,7 +10,6 @@ concurrency:
 jobs:
   bundle:
     runs-on: ubuntu-latest
-    if: github.repository != 'StageDog/tavern_extension_template'
     steps:
       # checkout
       - uses: actions/checkout@v4
