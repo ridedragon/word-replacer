@@ -1,6 +1,7 @@
 import vue from '@vitejs/plugin-vue';
 import path from 'node:path';
 import unpluginAutoImport from 'unplugin-auto-import/vite';
+import { VueUseComponentsResolver, VueUseDirectiveResolver } from 'unplugin-vue-components/resolvers';
 import unpluginVueComponents from 'unplugin-vue-components/vite';
 import { defineConfig } from 'vite';
 import pluginExternal from 'vite-plugin-external';
@@ -20,7 +21,13 @@ const relative_sillytavern_path = path.relative(
 
 export default defineConfig(({ mode }) => ({
   plugins: [
-    vue(),
+    vue({
+      features: {
+        optionsAPI: false,
+        prodDevtools: true,
+        prodHydrationMismatchDetails: false,
+      },
+    }),
     unpluginAutoImport({
       dts: true,
       dtsMode: 'overwrite',
@@ -31,10 +38,12 @@ export default defineConfig(({ mode }) => ({
         { from: '@sillytavern/scripts/i18n', imports: ['t'] },
         { from: 'zod', imports: ['z'] },
       ],
+      dirs: [{ glob: './src/panel/composable', types: true }],
     }),
     unpluginVueComponents({
       dts: true,
-      // globs: ['src/panel/component/*.vue'],
+      // globs: ['src/component/*.vue'],
+      resolvers: [VueUseComponentsResolver(), VueUseDirectiveResolver()],
     }),
     {
       name: 'sillytavern_resolver',
@@ -61,12 +70,6 @@ export default defineConfig(({ mode }) => ({
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-  },
-
-  define: {
-    __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: process.env.CI !== 'true',
-    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
   },
 
   build: {
