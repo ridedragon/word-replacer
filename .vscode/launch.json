@@ -13,7 +13,8 @@
       "webRoot": "${workspaceFolder}/../../../../",
       "cwd": "${workspaceFolder}",
       "skipFiles": [
-        "**/jquery*.min.js"
+        "**/jquery*.min.js",
+        "**/node_modules/**"
       ],
     },
     {
@@ -28,7 +29,8 @@
       "webRoot": "${workspaceFolder}/../../../../",
       "cwd": "${workspaceFolder}",
       "skipFiles": [
-        "**/jquery*.min.js"
+        "**/jquery*.min.js",
+        "**/node_modules/**"
       ],
     },
     {
@@ -41,7 +43,8 @@
       "webRoot": "${workspaceFolder}/../../../../",
       "cwd": "${workspaceFolder}",
       "skipFiles": [
-        "**/jquery*.min.js"
+        "**/jquery*.min.js",
+        "**/node_modules/**"
       ],
     }
   ]
