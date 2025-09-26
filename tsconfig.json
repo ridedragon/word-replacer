@@ -5,7 +5,6 @@
     "outDir": "dist",
     "baseUrl": "src",
     "types": [
-      "highlight.js",
       "jquery",
       "jqueryui",
       "lodash",
@@ -39,9 +38,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "auto-imports.d.ts",
-    "auto-imports.zod.d.ts",
-    "components.d.ts",
+    "*.d.ts",
     "src/**/*.ts",
     "../../../../**/*.js" // for intelligence
   ],
