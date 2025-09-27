@@ -42,8 +42,9 @@ export default defineConfig(({ mode }) => ({
     }),
     unpluginVueComponents({
       dts: true,
-      // globs: ['src/component/*.vue'],
+      syncMode: 'overwrite',
       resolvers: [VueUseComponentsResolver(), VueUseDirectiveResolver()],
+      // globs: ['src/panel/component/*.vue'],
     }),
     {
       name: 'sillytavern_resolver',
