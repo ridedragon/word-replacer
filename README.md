@@ -92,10 +92,11 @@ git config --global merge.ours.driver true
 
 ### 断点调试
 
-目前, windows 上不能在 VSCode 内 vue 文件中成功设置断点, 但其他平台能成功设置.
+目前, windows 上的断点调试存在一定问题: 你如果在 vscode 内对 vue 文件设置断点, 则用 chrome 或 edge 进行断点调试时, 这些断点无法生效.
 
-这疑似是 windows `\` 或卷名造成的, 我还没找到解决方法, 你可以:
+这疑似是酒馆网页根目录下没有 vite 配置文件造成的, 我还没找到彻底的解决方法, 你可以:
 
+- 安装 Debugger for Firefox 插件和[火狐浏览器](https://www.firefox.com/en-US/channel/desktop/developer/?redirect_source=mozilla-org), 然后使用配置好的 Firefox 配置文件进行调试.
 - 在代码中用 `debugger` 触发断点.
 - 在浏览器中 f12 手动设置断点.
 
