@@ -56,6 +56,8 @@ import { uuidv4 } from '@sillytavern/scripts/utils';  // 导入 `SillyTavern/pub
 
 模板默认提供的是使用 vue、pinia、zod 的示例. 尤其是 `store/settings.ts` 中对 pinia 的使用大幅简化了插件配置的存取: **其他地方代码只需要任意使用 `useSettingsStore` 返回的设置, 而设置将及时保存到酒馆存档内**.
 
+此外, 这里有一些 [vue、pinia、zod](https://stagedog.github.io/青空莉/工具经验/实时编写前端界面或脚本/进阶技巧/) 的使用技巧.
+
 #### tailwindcss
 
 本项目虽然支持了 tailwindcss, 但模板中并没有使用. 因为它的一些样式会导致酒馆网页的样式错乱. 如果你需要使用 tailwindcss, 请自行在 `src/global.css` 中添加 `@import 'tailwindcss';` 并修正其导致的样式错误.
@@ -96,7 +98,7 @@ git config --global merge.ours.driver true
 
 这疑似是酒馆网页根目录下没有 vite 配置文件造成的, 我还没找到彻底的解决方法, 你可以:
 
-- 安装 Debugger for Firefox 插件和[火狐浏览器](https://www.firefox.com/en-US/channel/desktop/developer/?redirect_source=mozilla-org), 然后使用配置好的 Firefox 配置文件进行调试.
+- 安装 Debugger for Firefox 插件和[火狐浏览器](https://www.firefox.com/en-US/channel/desktop/developer/?redirect_source=mozilla-org) (你可以安装[便携版](https://portableapps.com/apps/internet/firefox-developer-portable)然后在 VSCode 设置里指定路径为便携版), 然后使用模板里配置好的 Firefox 调试任务进行调试.
 - 在代码中用 `debugger` 触发断点.
 - 在浏览器中 f12 手动设置断点.
 
