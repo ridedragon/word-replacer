@@ -18,6 +18,8 @@ https://n0vi028.github.io/JS-Slash-Runner-Doc/guide/基本用法/开发其他插
 
 然后, 你需要更改 `manifest.json` 和 `package.json` 中的 `<占位符>` 为你想要的名字.
 
+为了让 `.github/workflows/` 中的工作流能正常运行, 你需要在仓库 `Settings -> Actions -> General` 中将 `Workflow permissions` 设置为 `Read and write permissions`, 并勾选 `Allow GitHub Actions to create and approve pull requests`
+
 ### 软件要求
 
 你需要先安装有 node 22+ 和 pnpm, 可以参考[实时编写前端界面或脚本的 Cursor 环境配置](https://stagedog.github.io/青空莉/工具经验/实时编写前端界面或脚本/环境准备/). 如果已经安装有 node 22+, 则 pnpm 可以按以下步骤安装:
