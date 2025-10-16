@@ -33,6 +33,10 @@
     "eslint-plugin-vue": "^10.5.1",
     "globals": "^16.4.0",
     "highlight.js": "^11.11.1",
+<<<<<<< HEAD
+=======
+    "postcss-load-config": "^6.0.1",
+>>>>>>> d4c8a8439aa6a87f3dc78db9c12355056842257a
     "postcss-loader": "^8.2.0",
     "postcss-minify": "^1.2.0",
     "prettier": "^3.6.2",
