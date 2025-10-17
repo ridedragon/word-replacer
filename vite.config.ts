@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => ({
     }),
     {
       name: 'sillytavern_resolver',
-      enforce: 'post',
+      enforce: 'pre',
       resolveId(id) {
         if (id.startsWith('@sillytavern/')) {
           return {
