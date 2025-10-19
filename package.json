@@ -33,6 +33,10 @@
     "eslint-plugin-vue": "^10.5.1",
     "globals": "^16.4.0",
     "highlight.js": "^11.11.1",
+<<<<<<< HEAD
+=======
+    "postcss-load-config": "^6.0.1",
+>>>>>>> f49502d1123334f214a8a3684b1c1c41aaa28499
     "postcss-loader": "^8.2.0",
     "postcss-minify": "^1.2.0",
     "prettier": "^3.6.2",
@@ -54,10 +58,18 @@
     "@vueuse/core": "^13.9.0",
     "@vueuse/integrations": "^13.9.0",
     "@vueuse/shared": "^13.9.0",
+<<<<<<< HEAD
+=======
+    "klona": "^2.0.6",
+>>>>>>> f49502d1123334f214a8a3684b1c1c41aaa28499
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.14",
     "type-fest": "^4.41.0",
     "vue": "^3.5.22",
+<<<<<<< HEAD
+=======
+    "vue-final-modal": "^4.5.5",
+>>>>>>> f49502d1123334f214a8a3684b1c1c41aaa28499
     "zod": "^4.1.12"
   }
 }
