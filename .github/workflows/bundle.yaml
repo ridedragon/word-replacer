@@ -42,6 +42,7 @@ jobs:
         uses: phish108/autotag-action@v1.1.64
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          release-branch: ''
           bump: ${{ steps.autotag_check.outputs.bump }}
           dry-run: true
       - if: ${{ github.ref_type == 'tag' }}
