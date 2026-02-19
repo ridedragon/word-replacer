@@ -19,6 +19,10 @@
     "@types/jqueryui": "^1.12.24",
     "@types/lodash": "^4.17.23",
     "@types/mark.js": "^8.11.12",
+<<<<<<< HEAD
+=======
+    "@types/showdown": "^2.0.6",
+>>>>>>> b8cc40daf9fa6b55eb96739a3db3f64ba42b4648
     "@types/toastr": "^2.1.43",
     "@typescript-eslint/parser": "^8.56.0",
     "@vitejs/plugin-vue": "^6.0.4",
@@ -33,6 +37,10 @@
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^16.5.0",
     "highlight.js": "^11.11.1",
+<<<<<<< HEAD
+=======
+    "postcss-load-config": "^6.0.1",
+>>>>>>> b8cc40daf9fa6b55eb96739a3db3f64ba42b4648
     "postcss-loader": "^8.2.1",
     "postcss-minify": "^1.2.0",
     "prettier": "^3.8.1",
@@ -54,10 +62,18 @@
     "@vueuse/core": "^13.9.0",
     "@vueuse/integrations": "^13.9.0",
     "@vueuse/shared": "^13.9.0",
+<<<<<<< HEAD
+=======
+    "klona": "^2.0.6",
+>>>>>>> b8cc40daf9fa6b55eb96739a3db3f64ba42b4648
     "pinia": "^3.0.4",
     "tailwindcss": "^4.2.0",
     "type-fest": "^4.41.0",
     "vue": "^3.5.28",
+<<<<<<< HEAD
+=======
+    "vue-final-modal": "^4.5.5",
+>>>>>>> b8cc40daf9fa6b55eb96739a3db3f64ba42b4648
     "zod": "^4.3.6"
   }
 }
